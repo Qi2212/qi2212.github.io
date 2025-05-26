@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Your Name</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      font-family: sans-serif;
+      max-width: 700px;
+      margin: auto;
+      padding: 2rem;
+      background-color: #f5f5f5;
+      color: #333;
+    }
+    h1 {
+      color: #007acc;
+    }
+    a {
+      color: #007acc;
+      text-decoration: none;
+    }
+    .section {
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <h1>Your Name</h1>
+  <p>Welcome to my personal homepage! I’m a [your job/title], working on [your field].</p>
+
+  <div class="section">
+    <h2>About Me</h2>
+    <p>
+      I’m passionate about [topic] and currently working on [project or company]. I enjoy building [apps/models/experiments] and sharing my work.
+    </p>
+  </div>
+
+  <div class="section">
+    <h2>Projects</h2>
+    <ul>
+      <li><a href="https://github.com/your-username/project1">Project 1</a> – Description</li>
+      <li><a href="https://github.com/your-username/project2">Project 2</a> – Description</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>Contact</h2>
+    <p>Email: you@example.com | <a href="https://www.linkedin.com/in/your-link">LinkedIn</a></p>
+  </div>
+</body>
+</html>
