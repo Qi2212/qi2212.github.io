@@ -1,14 +1,13 @@
-
-
 body {
   font-family: 'Helvetica Neue', sans-serif;
   margin: 0;
   padding: 0;
   color: #333;
   background: #fff;
-  overflow-x: hidden; /* 禁止水平滚动，隐藏横向溢出 */
-  overflow-y: hidden;
-  min-width: 1528px;
+  overflow-x: hidden;
+  display: flex;           /* 使用 Flexbox 布局 */
+  flex-direction: column;  /* 垂直排列子元素 */
+  min-height: 100vh;       /* 至少占满整个视口高度 */
 }
 
 .header {
@@ -53,9 +52,10 @@ body {
   background: #fff;
   padding: 10px 0;
 }
+
 .profile-container {
   display: flex;
-  justify-content: flex-end; /* 将整个头像区域推到右边 */
+  justify-content: flex-end;
   align-items: flex-start;
   gap: 40px;
   padding-left: 100px;
@@ -63,7 +63,7 @@ body {
 
 .avatar {
   width: 240px;
-  text-align: center; /* 所有文字和图标居中 */
+  text-align: center;
   padding-left: 0;
 }
 
@@ -74,29 +74,27 @@ body {
   margin-top: 35px;
   display: block;
   margin-left: auto;
-  margin-right: auto; /* 图片水平居中 */
+  margin-right: auto;
 }
 
 .social-icons {
   margin-top: 10px;
   display: flex;
-  justify-content: center; /* 图标水平居中 */
+  justify-content: center;
 }
 
 .social-icons a {
-  margin: 0 6px; /* 两侧间距对称，避免向右偏 */
+  margin: 0 6px;
   font-size: 18px;
   color: #007acc;
   text-decoration: none;
 }
 
-/* 右侧 bio 区域 */
 .bio {
   flex: 1;
-  padding-left: 60px;   /* 新增：向右移动整个 bio 区域 */
+  padding-left: 60px;
   max-width: 80%;
 }
-
 
 .bio h2 {
   margin-top: 30px;
@@ -128,10 +126,20 @@ body {
   margin-bottom: 10px;
 }
 
+/* 主要修改部分：让中间内容区域可滚动 */
+.main-content {
+  flex: 1;                  /* 占据剩余空间 */
+  overflow-y: auto;         /* 内容过多时显示垂直滚动条 */
+  padding-bottom: 20px;     /* 底部留出空间，避免内容被遮挡 */
+}
+
 /* Publications 区域 */
 .publications {
   background: #fafafa;
-  padding: 50px 0 20px 0;  /* 修改最后一个值为 20px，表示下边距 */
+  padding: 50px 0 20px 0;
+  margin-top: auto;         /* 推到页面底部 */
+  position: relative;       /* 确保相对定位 */
+  z-index: 10;              /* 设置层级，确保显示在最上层 */
 }
 
 .publications-container {
@@ -140,11 +148,10 @@ body {
   margin: 0 auto;
   gap: 50px;
   align-items: flex-start;
-  padding-left: 200px; /* 新增：整体右移 */
+  padding-left: 200px;
 }
 
 .left-side {
-  /* margin-top: 10px; */
   font-family: "Times New Roman", serif;
   flex: 1;
   max-width: 200px;
@@ -153,18 +160,15 @@ body {
   font-size: 2.0rem;
   line-height: 1;
   padding-left: 10px;
-  position: relative;   /* 新增 */
-  left: -200px;          /* 整体左移20px */
+  position: relative;
+  left: -200px;
   margin-top: 30px;
   margin-left: 40px;
-
 }
 
 .left-side h2 {
   margin: 0;
-  /* 去掉margin-left，防止冲突 */
 }
-
 
 .left-side .more {
   display: inline-block;
@@ -181,8 +185,8 @@ body {
 
 .right-side {
   flex: 3;
-  position: relative; /* 使 left 生效 */
-  left: -60px;        /* 向左移动20px */
+  position: relative;
+  left: -60px;
 }
 
 .publications ul {
@@ -200,15 +204,14 @@ body {
 
 .btn {
   display: inline-block;
-  background: transparent;       /* 背景透明 */
-  color: #0066cc;                /* 字体颜色 */
+  background: transparent;
+  color: #0066cc;
   padding: 3px 8px;
   margin-left: 5px;
   font-size: 13px;
-  border: 1px solid #0066cc;     /* 添加边框 */
+  border: 1px solid #0066cc;
   border-radius: 3px;
 }
-
 
 .no-underline {
   text-decoration: none;
