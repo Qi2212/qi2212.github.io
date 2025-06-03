@@ -2,51 +2,106 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Your Name</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <style>
-    body {
-      font-family: sans-serif;
-      max-width: 700px;
-      margin: auto;
-      padding: 2rem;
-      background-color: #f5f5f5;
-      color: #333;
-    }
-    h1 {
-      color: #007acc;
-    }
-    a {
-      color: #007acc;
-      text-decoration: none;
-    }
-    .section {
-      margin-top: 2rem;
-    }
-  </style>
+  <title>Shuqi Xia - Personal Profile</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
-  <h1>Your Name</h1>
-  <p>Welcome to my personal homepage! I’m a [your job/title], working on [your field].</p>
 
-  <div class="section">
-    <h2>About Me</h2>
-    <p>
-      I’m passionate about [topic] and currently working on [project or company]. I enjoy building [apps/models/experiments] and sharing my work.
-    </p>
-  </div>
+  <header class="header">
+    <div class="container header-container">
+      <h1>Qi's Space</h1>
+      <nav class="nav">
+        <a href="projects.html">Projects</a>
+        <a href="publications.html">Publications</a>
+        <a href="competitions.html">Competitions</a>
+        <a href="others.html">Others</a>
+      </nav>
+    </div>
+  </header>
+  
+  
+  <section class="profile">
+    <div class="container profile-container">
+      
+      <!-- 左侧头像 -->
+      <div class="avatar">
+        <img src="imgs/a.jpg" alt="Profile Picture">
+        <h2>Shuqi Xia</h2>
+        <p>Undergraduate Student in IOT <br>TYUT<br>📍 Shanxi | 🏡 GuangZhou <br> 📫 xiashuqi1124@gmail.com</p>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-google"></i></a>
+          <a href="https://github.com/Qi2212" target="_blank"><i class="fab fa-github"></i></a>
+        </div>
+      </div>
+  
+      <!-- 右侧简介 -->
+      <div class="bio">
+        <h2>🎩 Biography</h2>
+        <p>
+          I am an undergraduate student majoring in Internet of Things Engineering at Taiyuan University of Technology. Currently, I am a member of the IPBD Lab, where I have participated in projects involving large language models integrated with retrieval-augmented generation (RAG), as well as an intelligent heart rate monitoring system for IoT applications. I am actively exploring deep learning, and currently working on a project that enhances general semantic segmentation by combining SAM with DINOv2.
+        </p>
+        <div class="columns">
+          <div class="interests">
+            <h3>💻 Interests</h3>
+            <ul>
+              <li>📌 Artificial Intelligence</li>
+              <li>📌 Computer Vision</li>
+              <li>📌 Medical semantic segmentation</li>
+              <li>📌 Graph Neural Networks</li>
+            </ul>
+          </div>
+          <div class="education">
+            <h3>🎓 Education</h3>
+            <ul>
+              <li>📎 Bachelor of Engineering in Internet of Things Engineering, 2026</li>
+              <li>🎯 Next Stage ... <br></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+  
+    </div>
+  </section>
+  
+  <section class="publications">
+    <div class="container publications-container">
+      <div class="left-side">
+        <h2>
+          Recent<br>
+          Achievements<br>
+        </h2>
+        <a href="#" class="more">More Achievements &raquo;</a>
+      </div>
+      <div class="right-side">
+        <ul>
+          <li>
+            🚧 Project: Intelligent heart rate detection system based on Pulse Sensor
+            <span class="btn">Details</span>
+            <span class="btn">Video</span>
+            <span class="btn"><a href="https://github.com/Qi2212/small-satellite-large-model" target="_blank" class="no-underline">Code</a></span>
+          </li>
+          <li>
+            🚧 Project: Qwen-based LLM + RAG Enhanced Private Q&A – CAS Institute of Microsatellite Innovation
+            <span class="btn-group">
+              <span class="btn">Details</span>
+              <span class="btn">Video</span>
+              <span class="btn"><a href="https://github.com/Qi2212/small-satellite-large-model" target="_blank" class="no-underline">Code</a></span>
+            </span>
+          </li>
+          
+          <li>
+            📄 Publication: <em>MCAUnet: A Deep Learning Framework for Automated Quantification of Body Composition in Liver Cirrhosis Patients</em>
+            <!-- <span class="btn">PDF</span> -->
+            <span class="btn">JCR Q2</span>
+          </li>                
+        </ul>
+      </div>
+    </div>
+  </section>
+  
+  
 
-  <div class="section">
-    <h2>Projects</h2>
-    <ul>
-      <li><a href="https://github.com/your-username/project1">Project 1</a> – Description</li>
-      <li><a href="https://github.com/your-username/project2">Project 2</a> – Description</li>
-    </ul>
-  </div>
-
-  <div class="section">
-    <h2>Contact</h2>
-    <p>Email: you@example.com | <a href="https://www.linkedin.com/in/your-link">LinkedIn</a></p>
-  </div>
 </body>
 </html>

@@ -1,0 +1,216 @@
+
+
+body {
+  font-family: 'Helvetica Neue', sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #333;
+  background: #fff;
+  overflow-x: hidden; /* 禁止水平滚动，隐藏横向溢出 */
+  overflow-y: hidden;
+  min-width: 1528px;
+}
+
+.header {
+  background: #fff;
+  padding: 15px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav a {
+  margin-left: 40px;
+  text-decoration: none;
+  color: #888;
+  font-weight: 500;
+  font-size: 16px;
+  transition: color 0.3s;
+}
+
+.nav a:hover {
+  color: #007bff;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 22px;
+  color: #888;
+  padding-left: 30px;
+}
+
+.container {
+  width: 98%;
+  max-width: none;
+  margin: auto;
+}
+
+.profile {
+  background: #fff;
+  padding: 10px 0;
+}
+.profile-container {
+  display: flex;
+  justify-content: flex-end; /* 将整个头像区域推到右边 */
+  align-items: flex-start;
+  gap: 40px;
+  padding-left: 100px;
+}
+
+.avatar {
+  width: 240px;
+  text-align: center; /* 所有文字和图标居中 */
+  padding-left: 0;
+}
+
+.avatar img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  margin-top: 35px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto; /* 图片水平居中 */
+}
+
+.social-icons {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center; /* 图标水平居中 */
+}
+
+.social-icons a {
+  margin: 0 6px; /* 两侧间距对称，避免向右偏 */
+  font-size: 18px;
+  color: #007acc;
+  text-decoration: none;
+}
+
+/* 右侧 bio 区域 */
+.bio {
+  flex: 1;
+  padding-left: 60px;   /* 新增：向右移动整个 bio 区域 */
+  max-width: 80%;
+}
+
+
+.bio h2 {
+  margin-top: 30px;
+}
+
+.bio p {
+  text-indent: 2em;
+  margin-top: 0;
+  max-width: none;
+  padding-right: 100px;
+}
+
+.columns {
+  display: flex;
+  gap: 40px;
+  margin-top: 20px;
+}
+
+.columns h3 {
+  margin-bottom: 10px;
+}
+
+.columns ul {
+  list-style: none;
+  padding: 0;
+}
+
+.columns li {
+  margin-bottom: 10px;
+}
+
+/* Publications 区域 */
+.publications {
+  background: #fafafa;
+  padding: 50px 0 20px 0;  /* 修改最后一个值为 20px，表示下边距 */
+}
+
+.publications-container {
+  display: flex;
+  max-width: 1500px;
+  margin: 0 auto;
+  gap: 50px;
+  align-items: flex-start;
+  padding-left: 200px; /* 新增：整体右移 */
+}
+
+.left-side {
+  /* margin-top: 10px; */
+  font-family: "Times New Roman", serif;
+  flex: 1;
+  max-width: 200px;
+  color: #222;
+  font-weight: normal;
+  font-size: 2.0rem;
+  line-height: 1;
+  padding-left: 10px;
+  position: relative;   /* 新增 */
+  left: -200px;          /* 整体左移20px */
+  margin-top: 30px;
+  margin-left: 40px;
+
+}
+
+.left-side h2 {
+  margin: 0;
+  /* 去掉margin-left，防止冲突 */
+}
+
+
+.left-side .more {
+  display: inline-block;
+  margin-top: 15px;
+  font-size: 1rem;
+  color: #007acc;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.left-side .more:hover {
+  text-decoration: underline;
+}
+
+.right-side {
+  flex: 3;
+  position: relative; /* 使 left 生效 */
+  left: -60px;        /* 向左移动20px */
+}
+
+.publications ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.publications li {
+  margin-bottom: 15px;
+  font-size: 1rem;
+  color: #333;
+  padding-right: 10px;
+}
+
+.btn {
+  display: inline-block;
+  background: transparent;       /* 背景透明 */
+  color: #0066cc;                /* 字体颜色 */
+  padding: 3px 8px;
+  margin-left: 5px;
+  font-size: 13px;
+  border: 1px solid #0066cc;     /* 添加边框 */
+  border-radius: 3px;
+}
+
+
+.no-underline {
+  text-decoration: none;
+  color: inherit;
+}
