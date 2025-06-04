@@ -214,12 +214,61 @@
     padding-left: var(--spacing-lg);
   }
   
-  .right-scrollable li {
-    margin-bottom: var(--spacing-xs);
+
+  .project-link {
+    color: var(--text-color);
+    text-decoration: none;       /* ❌ 取消下划线 */
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.2s ease;
   }
+  
+  .project-link:hover {
+    color: var(--primary-color); /* 悬停变色 */
+    transform: translateY(-2px); /* 上浮效果 */
+  }
+  
+  .project-description {
+    margin-right: 15px; /* 图片和文字之间的间距 */
+    line-height: 1.6;
+  }
+  
+  .project-description p {
+    margin-bottom: 8px; /* 控制段落之间的间距 */
+  }
+  
+  .project-image {
+    width: 150px; /* 图片宽度 */
+    height: auto;  /* 高度自动调整 */
+    border-radius: 8px; /* 可选：为图片添加圆角 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 可选：为图片添加阴影 */
+    margin: 15px; /* 增加图片之间的间距 */
+    transition: transform 0.3s ease; /* 添加平滑的放大效果 */
+  }
+  
+  /* 点击放大效果 */
+  .project-image:active {
+    transform: scale(3); /* 点击时放大 1.2 倍 */
+  }
+
+  .right-scrollable li {
+    margin-bottom: var(--spacing-sm); /* 统一底部间距 */
+    color: var(--text-color); /* 默认字体颜色 */
+    text-decoration: none; /* 去除下划线 */
+    cursor: pointer; /* 鼠标悬停时显示为可点击的手指图标 */
+    transition: color 0.3s ease, transform 0.2s ease; /* 添加平滑的过渡效果 */
+    font-size: 1.0rem;
+  }
+  
+  .right-scrollable li:hover {
+    color: var(--primary-color); /* 悬停时变为主色 */
+    transform: translateY(-2px); /* 悬停时微微上浮的效果 */
+  }
+  
   
   .right-scrollable p {
     color: var(--text-color);
     margin-bottom: var(--spacing-sm);
   }
+  
   
