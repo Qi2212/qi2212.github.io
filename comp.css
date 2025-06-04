@@ -190,15 +190,24 @@ body {
   scroll-behavior: smooth;
 }
 
-.right-scrollable section {
-  margin-bottom: var(--spacing-lg);
+.right-scrollable h2 {
+  margin-top: 0;
+  font-size: 1.75rem; /* 与 .bio h2 保持一致 */
+  color: var(--text-color); /* 与 .bio h2 保持一致 */
+  margin-bottom: var(--spacing-sm);
+  position: relative; /* 为了能添加 ::after 横线 */
 }
 
-.right-scrollable h2 {
-  font-size: 1.5rem;
-  color: var(--primary-color);
-  margin-bottom: var(--spacing-sm);
+.right-scrollable h2::after {
+  content: '';
+  position: absolute;
+  width: 50px;
+  height: 3px;
+  background-color: var(--primary-color);
+  bottom: -8px;
+  left: 0;
 }
+
 
 .right-scrollable ul {
   list-style-type: disc;
